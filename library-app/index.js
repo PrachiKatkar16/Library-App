@@ -16,6 +16,10 @@ app.use(cors({
 app.use(express.json());
 app.use(morgan('dev'));
 
+app.get('/',(req,res)=>{
+    res.send("welcome");
+})
+
 // Routes
 app.use('/api/auth',userRouter);
 app.use('/api/books', bookRouter);
